@@ -8,4 +8,5 @@
 // Constantes
 // Protótipos das funções
 
+void exibirmenu(void);
 #endif //PROVA_MAROMO_MODULO_H
