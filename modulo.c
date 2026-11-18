@@ -3,3 +3,6 @@
 //
 
 #include "modulo.h"
+
+
+// Implementação das funções

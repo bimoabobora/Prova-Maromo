@@ -1,3 +1,7 @@
-//
-// Created by rafae on 18/11/2026.
-//
+#include <stdio.h>
+#include "modulo.h"
+
+int main(void) {
+    // Menu principal
+    return 0;
+}

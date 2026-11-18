@@ -4,5 +4,8 @@
 
 #ifndef PROVA_MAROMO_MODULO_H
 #define PROVA_MAROMO_MODULO_H
+// Struct
+// Constantes
+// Protótipos das funções
 
 #endif //PROVA_MAROMO_MODULO_H
