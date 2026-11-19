@@ -9,4 +9,9 @@
 // Protótipos das funções
 
 void exibirmenu(void);
-#endif //PROVA_MAROMO_MODULO_H
+void cadastrarJogo(void);
+void listaDeJogos(void);
+void mediaDeHoras(void);
+#endif 
+
+//PROVA_MAROMO_MODULO_H
