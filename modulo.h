@@ -4,5 +4,9 @@
 
 #ifndef PROVA_MAROMO_MODULO_H
 #define PROVA_MAROMO_MODULO_H
+// Struct
+// Constantes
+// Protótipos das funções
 
+void exibirmenu(void);
 #endif //PROVA_MAROMO_MODULO_H
