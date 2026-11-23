@@ -8,10 +8,20 @@
 // Constantes
 // Protótipos das funções
 
+struct Dados
+{
+    int id;
+    char titulo[255];
+    char desenvolvedora[255];
+    float preco;
+    int horasJogadas;
+};
+
+
 void exibirmenu(void);
-void cadastrarJogo(void);
-void listaDeJogos(void);
-void mediaDeHoras(void);
+int cadastrarJogo();
+int listaDeJogos();
+int mediaDeHoras();
 #endif 
 
 //PROVA_MAROMO_MODULO_H
