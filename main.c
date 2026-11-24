@@ -6,6 +6,6 @@ int main(void) {
     SetConsoleOutputCP(65001);
     SetConsoleCP(65001);
     // Menu principal
-     exibirmenu();
+    exibirmenu();
     return 0;
 }
