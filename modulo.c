@@ -39,7 +39,13 @@ void exibirmenu(void) {
             }
             case (4):
             {
-                boole = 0; 
+                boole = 0;
+                break;
+            }
+            default:
+            {
+                printf("Opção não identificada\n");
+                break;
             }
         }
     }
