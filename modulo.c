@@ -74,7 +74,7 @@ int cadastrarJogo()
         printf("Erro na leitura do arquivo");
         return -1;
     }
-    struct Dados dado;
+    Dados dado;
     printf("Digite o ID do jogo: ");
     scanf("%d", &dado.id);
     printf("Digite o Titulo do jogo: ");
@@ -100,7 +100,7 @@ int listaDeJogos() {
             return -1;
         }
 
-        struct Dados dado;
+        Dados dado;
         printf("\n--- LISTA DE JOGOS ---\n");
 
         // CORREÇÃO 4: Removido o \n do final do formato para evitar falhas na última linha
@@ -123,13 +123,15 @@ int mediaDeHoras() {
         return -1;
     }
 
-    struct Dados dado;
+    Dados dado;
     int totalHoras = 0;
+    float totalPreco = 0;
     int qtdJogos = 0;
 
     // Lê ID e Horas, ignorando os campos do meio (;%*[^;];)
-    while (fscanf(pF, "%d;%*[^;];%*[^;];%*f;%d", &dado.id, &dado.horasJogadas) == 2) {
+    while (fscanf(pF, "%d;%*[^;];%*[^;];%f;%d", &dado.id,  &dado.preco, &dado.horasJogadas) == 3) {
         totalHoras += dado.horasJogadas;
+        totalPreco += dado.preco;
         qtdJogos++;
     }
 
@@ -139,9 +141,11 @@ int mediaDeHoras() {
         printf("Não há jogos para calcular a média.\n");
     } else {
         float media = (float)totalHoras / qtdJogos;
+        float mediaPreco = totalPreco/ qtdJogos;
         printf("\n--- MÉDIA DE HORAS ---\n");
         printf("Total de jogos: %d\n", qtdJogos);
         printf("Média de horas jogadas: %.2f horas\n", media);
+        printf("Média dos preços dos jogos: R$%.2f\n", mediaPreco);
         printf("----------------------\n");
     }
 

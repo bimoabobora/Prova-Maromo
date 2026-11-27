@@ -10,14 +10,14 @@
 
 #define MAX 255
 
-struct Dados
+typedef struct Dados
 {
     int id;
     char titulo[MAX];
     char desenvolvedora[MAX];
     float preco;
     int horasJogadas;
-};
+} Dados;
 
 
 void exibirmenu(void);
