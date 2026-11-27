@@ -8,11 +8,13 @@
 // Constantes
 // Protótipos das funções
 
+#define MAX 255
+
 struct Dados
 {
     int id;
-    char titulo[255];
-    char desenvolvedora[255];
+    char titulo[MAX];
+    char desenvolvedora[MAX];
     float preco;
     int horasJogadas;
 };
