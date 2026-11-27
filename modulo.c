@@ -59,7 +59,7 @@ int cadastrarJogo()
         printf("Erro na leitura do arquivo");
         return -1;
     }
-    struct Dados dado;
+    Dados dado;
     printf("Digite o ID do jogo: ");
     scanf("%d", &dado.id);
     printf("Digite o Titulo do jogo: ");
@@ -85,7 +85,7 @@ int listaDeJogos() {
             return -1;
         }
 
-        struct Dados dado;
+        Dados dado;
         printf("\n--- LISTA DE JOGOS ---\n");
 
         // CORREÇÃO 4: Removido o \n do final do formato para evitar falhas na última linha
@@ -108,7 +108,7 @@ int mediaDeHoras() {
         return -1;
     }
 
-    struct Dados dado;
+    Dados dado;
     int totalHoras = 0;
     int qtdJogos = 0;
 
