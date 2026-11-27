@@ -65,7 +65,7 @@ int cadastrarJogo()
     printf("Digite o horasJogadas do jogo: ");
     scanf(" %d", &dado.horasJogadas);
 
-    fprintf(pF,"%d %s %s %.2f %d\n", dado.id, dado.titulo, dado.desenvolvedora, dado.preco, dado.horasJogadas);
+    fprintf(pF,"%d;%s;%s;%.2f;%d\n", dado.id, dado.titulo, dado.desenvolvedora, dado.preco, dado.horasJogadas);
     fclose(pF);
 }
 
