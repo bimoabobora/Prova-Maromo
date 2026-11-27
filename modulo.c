@@ -69,14 +69,63 @@ int cadastrarJogo()
     fclose(pF);
 }
 
-int listaDeJogos()
-{
-    printf("Não implementado");
+
+int listaDeJogos() {
+
+
+        FILE *pF = fopen("dados.txt", "r");
+        if (pF == NULL) {
+            printf("Nenhum jogo cadastrado ainda ou erro ao abrir arquivo.\n");
+            return -1;
+        }
+
+        struct Dados dado;
+        printf("\n--- LISTA DE JOGOS ---\n");
+
+        // CORREÇÃO 4: Removido o \n do final do formato para evitar falhas na última linha
+        while (fscanf(pF, "%d;%[^;];%[^;];%f;%d", &dado.id, dado.titulo, dado.desenvolvedora, &dado.preco, &dado.horasJogadas) == 5) {
+            printf("ID: %d | Titulo: %s | Dev: %s | Preco: R$%.2f | Horas: %d\n",
+                   dado.id, dado.titulo, dado.desenvolvedora, dado.preco, dado.horasJogadas);
+        }
+        printf("----------------------\n");
+
+        fclose(pF);
+        return 0;
+    }
+
+
+int mediaDeHoras() {
+
+    FILE *pF = fopen("dados.txt", "r");
+    if (pF == NULL) {
+        printf("Nenhum jogo cadastrado ainda.\n");
+        return -1;
+    }
+
+    struct Dados dado;
+    int totalHoras = 0;
+    int qtdJogos = 0;
+
+    // Lê ID e Horas, ignorando os campos do meio (;%*[^;];)
+    while (fscanf(pF, "%d;%*[^;];%*[^;];%*f;%d", &dado.id, &dado.horasJogadas) == 2) {
+        totalHoras += dado.horasJogadas;
+        qtdJogos++;
+    }
+
+    fclose(pF); // CORREÇÃO 2: fclose agora está no lugar certo
+
+    if (qtdJogos == 0) {
+        printf("Não há jogos para calcular a média.\n");
+    } else {
+        float media = (float)totalHoras / qtdJogos;
+        printf("\n--- MÉDIA DE HORAS ---\n");
+        printf("Total de jogos: %d\n", qtdJogos);
+        printf("Média de horas jogadas: %.2f horas\n", media);
+        printf("----------------------\n");
+    }
+
+    return 0; // CORREÇÃO 2: Removido o código duplicado que estava aqui
 }
 
-int mediaDeHoras()
-{
-    printf("Não implementado");
-}
 
 // Implementação das funções
