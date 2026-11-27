@@ -24,6 +24,10 @@ void exibirmenu(void);
 int cadastrarJogo();
 int listaDeJogos();
 int mediaDeHoras();
+int buscarJogoPorId(int idProcurado, struct Dados *encontrado);
+void menuBuscarJogo(void);
+int alterarJogoPorId(void);
+int deletarJogoPorId(void);
 #endif 
 
 //PROVA_MAROMO_MODULO_H

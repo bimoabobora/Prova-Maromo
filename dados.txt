@@ -1,0 +1,4 @@
+1;mario carte ;nintendo;400.00;400
+4;GTA 6;Rock star;450.00;44
+2;gta6;rock star ;450.00;55
+3;mine;microsoft;400.00;1000
